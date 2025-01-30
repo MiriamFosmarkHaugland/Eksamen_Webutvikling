@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root{
+    height: 100%;
+    width: 100%;
+}
+
+.grid-layout { 
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.column-12{
+    grid-column: auto / span 12;
+}
+
+@media all and (min-width: 768px) {
+    .column-sm-6 {
+        grid-column: auto / span 6;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .column-lg-4 {
+        grid-column: auto / span 4;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .column-xl-3 {
+        grid-column: auto / span 3;
+    }
+}
